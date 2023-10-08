@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operation Save Them Sea Critters - Protecting Marine Life Worldwide</title>
+    
+    <style>
+
+        #marineAnimalsDirectory {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.marineAnimal {
+    display: flex;
+    align-items: center;
+    margin: 10px 0; /* Provides some vertical spacing between each marine animal */
+}
+
+.marineAnimal img {
+    width: 100px; /* Or whatever size you prefer */
+    height: 100px;
+    border-radius: 50%; /* Makes the image circular */
+    margin-right: 10px; /* Space between the image and the name */
+}
+
+        .animalList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.animalItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.animalImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e7f2f8;
+            background-image: url('beach_background.jpg'); /* Assuming a beach themed background image */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: rgba(0, 119, 182, 0.8); /* Slightly transparent for the beach theme */
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        button {
+            background-color: #0096c7;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            margin: 1rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0077b6;
+        }
+
+        footer {
+            background-color: rgba(0, 119, 182, 0.8); /* Slightly transparent for the beach theme */
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        main {
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background to make text readable against beach background */
+        }
+
+        .speciesItem {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgba(255, 255, 255, 0.5); /* Slightly transparent for the beach theme */
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+        }
+
+        .commonName, .conservationStatus {
+            margin: 0.5rem;
+        }
+
+        /* Chatroom styles */
+        #chatroom {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 250px;
+            height: 400px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #0096c7;
+            border-radius: 10px;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Operation Save Them Sea Critters</h1>
+        <p>Protecting Marine Life Worldwide</p>
+    </header>
+    
+    <main>
+        
+        <button id="findSpeciesBtn">Find Endangered Species Near Me</button>
+
+        <section id="speciesSpotlight">
+            <h2>Species Spotlight</h2>
+            <div class="speciesItem marineAnimal">
+                <img src="https://www.montereyherald.com/wp-content/uploads/migration/2015/201506/NEWS_150619781_AR_0_XQCQHMOYMVNY.jpg?w=1024" alt="Adorabilis">
+                <span class="commonName">Adorabilis (California Coast)</span>
+            <!-- Add carousel/slider functionality here for displaying species -->
+        </section>
+
+        <section id="howToHelp">
+            <h2>How to Help</h2>
+            <p>Learn about the marine species that are endangered and the reasons for their decline.
+
+                Participate in beach clean-ups to remove trash from the shoreline.
+                Support Marine Protected Areas (MPAs)
+                Donate to or volunteer with organizations dedicated to marine conservation.
+                Join projects that involve collecting data on marine life, which can help scientists in their research.</p>
+        </section>
+
+        <section id="recreationTips">
+            <h2>Safe Recreation Tips</h2>
+            <p> Always keep a safe distance from marine animals, especially those that are endangered.<p>Avoid chasing, touching, or feeding marine life. This can stress them and alter their natural behaviors.
+                
+            <p>Follow designated paths to avoid trampling coral reefs, seagrass beds, and other fragile ecosystems.</p>
+            <p>Stay away from nesting sites, breeding grounds, and other sensitive habitats.</p>
+        </p>If you encounter injured or stranded marine animals, contact local authorities or marine rescue organizations. Do not attempt to help the animal yourself unless instructed to do so.</p>
+        </section>
+        
+        <section id="speciesDirectory">
+            <h2>MARINE SPECIES DIRECTORY</h2>
+            
+            <!-- Ordered from Critically Endangered to Least Concern -->
+            
+            <!-- Critically Endangered Species -->
+            <div class="speciesItem marineAnimal">
+                <img src="https://files.worldwildlife.org/wwfcmsprod/images/vaquita_caught_in_net_5_facts_social/story_full_width/10nc0qjhlf_vaquita_story_hero.jpg" alt="Vaquita">
+                <span class="commonName">Vaquita (Gulf of California)</span>
+                <span class="conservationStatus">Critically Endangered</span>
+            </div>
+            <div class="speciesItem marineAnimal">
+                <img src="https://www.fisheries.noaa.gov/s3/styles/full_width/s3/dam-migration/hawksbill_sea_turtle.jpg" alt="Hawksbill Turtle">
+                <span class="commonName">Hawksbill Turtle (Tropical Oceans)</span>
+                <span class="conservationStatus">Critically Endangered</span>
+            </div>
+            <div class="speciesItem marineAnimal">
+                <img src="https://www.fisheries.noaa.gov/s3/styles/full_width/s3/dam-migration/750x500-elkhorn-coral.jpg" alt="Elkhorn Coral">
+                <span class="commonName">Elkhorn Coral (Caribbean Sea)</span>
+                <span class="conservationStatus">Critically Endangered</span>
+            </div>
+
+            <!-- Endangered Species -->
+            <div class="speciesItem marineAnimal">
+                <img src="data:image/jpeg;base64,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" alt="Whale">
+                <span class="commonName">Whale (Worldwide Oceans)</span>
+                <span class="conservationStatus">Endangered</span>
+            </div>
+            <div class="speciesItem marineAnimal">
+                <img src="https://files.worldwildlife.org/wwfcmsprod/images/Whale_Shark_Homepage_Image/story_full_width/7a2odg1xq_Whale_Shark_Homepage.jpg" alt="Whale Shark">
+                <span class="commonName">Whale Shark (Tropical Oceans)</span>
+                <span class="conservationStatus">Endangered</span>
+            </div>
+            <div class="speciesItem marineAnimal">
+                <img src="data:image/jpeg;base64,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" alt="Hector's Dolphin">
+                <span class="commonName">Hector's Dolphin (New Zealand)</span>
+                <span class="conservationStatus">Endangered</span>
+            </div>
+            <div class="speciesItem marineAnimal">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScUrx5TbGtJYLZ4wqRcrhkiFPWbq_3pWZoLQ&usqp=CAU" alt="Irrawaddy Dolphin">
+                <span class="commonName">Irrawaddy Dolphin (Asia & Australia)</span>
+                <span class="conservationStatus">Endangered</span>
+            </div>
+            <div class="speciesItem marineAnimal">
+                <img src="https://people.com/thmb/O13MWaroGpsJlhCVmQMAaulibqI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(999x0:1001x2)/north-atlantic-right-whale-54cbcb04ed5c452cb71250cb389ccc91.jpg" alt="North Atlantic Right Whale">
+                <span class="commonName">North Atlantic Right Whale (North Atlantic Ocean)</span>
+                <span class="conservationStatus">Endangered</span>
+            </div>
+            <div class="speciesItem marineAnimal">
+                <img src="https://www.friendsofcortes.org/wp-content/uploads/2020/09/StellersSealion-8by6.jpg" alt="Stellar Sea Lion">
+                <span class="commonName">Steller Sea Lion (North Pacific)</span>
+                <span class="conservationStatus">Endangered</span>
+            </div>
+            <div class="speciesItem marineAnimal">
+                <img src="https://umaine.edu/news/wp-content/uploads/sites/3/2021/11/Bluefin-tuna-news-feature.jpg" alt="Atlantic Bluefin">
+                <span class="commonName">Atlantic Bluefin Tuna (Western Atlantic Ocean)</span>
+                <span class="conservationStatus">Endangered</span>
+            </div>
+            <!-- ... More endangered species ... -->
+
+            <!-- Near Threatened Species -->
+            <div class="speciesItem marineAnimal">
+                <img src="https://wildlife.ca.gov/portals/0/Images/InlandFisheries/Sturgeon/whitebalancedGreenSturgeon.jpg" alt="Green Sturgeon">
+                <span class="commonName">Green Sturgeon (North American West Coast)</span>
+                <span class="conservationStatus">Threatened</span>
+            </div>
+            <div class="speciesItem marineAnimal">
+                <img src="https://wildonthefly.com/cdn/shop/products/YellowfinTuna.jpg?v=1658116947" alt="Yellowfin Tuna">
+                <span class="commonName">Yellowfin Tuna (Tropical and Subtropical Oceans)</span>
+                <span class="conservationStatus">Near Threatened</span>
+                </div>
+                
+
+                <!-- Vulnerable Species -->
+                <div class="speciesItem marineAnimal">
+                    <img src="https://www.usatoday.com/gcdn/presto/2022/03/24/USAT/fe333d8d-ef90-429c-9474-1a22c2d8bf3c-SHARK_FRIENDS_ADOBE_.jpg?width=660&height=371&fit=crop&format=pjpg&auto=webp" alt="Great White Shark">
+                    <span class="commonName">Great White Shark (Coastal Oceans)</span>
+                    <span class="conservationStatus">Vulnerable</span>
+                </div>
+                <div class="speciesItem marineAnimal">
+                    <img src="https://res.cloudinary.com/roundglass/image/upload/w_1200,h_675,c_fill/q_auto:best,f_auto/v1626241440/roundglass/andaman-nicobar-islands-leatherback-turtle-close-up-adhith-swaminathan-scaled_cu05bs.jpg" alt="Leatherback Turtle">
+                    <span class="commonName">Leatherback Turtle (Open Oceans)</span>
+                    <span class="conservationStatus">Vulnerable</span>
+                </div>
+                <div class="speciesItem marineAnimal">
+                    <img src="https://i.guim.co.uk/img/media/b3e038f98ce2cde24e5c5bb7e8200e65bbc4ae8c/0_363_5442_3265/master/5442.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=afa002b9dfd9928dad0e8b142b560dd7" alt="Loggerhead Turtle">
+                    <span class="commonName">Loggerhead Turtle (Open Oceans)</span>
+                    <span class="conservationStatus">Vulnerable</span>
+                </div>
+                <!-- ... More vulnerable species ... -->
+    
+                <!-- Least Concern Species -->
+                <div class="speciesItem marineAnimal">
+                    <img src="https://media.istockphoto.com/id/1334276621/photo/bluefin-tuna-thunnus-thynnus-saltwater-fish.jpg?s=612x612&w=0&k=20&c=FNDMZ2Ptv1obv2ubYB5p81jAPVp6lJIZYDmbUeYyXhc=" alt="Skipjack Tuna">
+                    <span class="commonName">Skipjack Tuna (Tropical Oceans)</span>
+                    <span class="conservationStatus">Least Concern</span>
+                </div>
+                <!-- ... More least concern species ... -->
+            </section>
+        </main>
+    
+
+        <!-- Chatroom Feature -->
+<div id="chatroom">
+    <h4>Community Chat <button id="toggleChatBtn">Minimize</button></h4>
+    <div id="chatContent">
+        <div id="messages">
+            <!-- Messages will appear here -->
+        </div>
+        <textarea id="chatInput" placeholder="Type your message..."></textarea>
+        <button id="sendMsgBtn">Send</button>
+    </div>
+</div>
+
+<!-- ... Previous code ... -->
+
+<style>
+    /* ... Existing styles ... */
+
+    #chatroom {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        border: 1px solid #0077b6;
+        border-radius: 8px;
+        background-color: white;
+        width: 250px;
+        max-height: 275px;
+        overflow-y: auto;
+    }
+
+    #chatContent {
+        display: block;  /* initially showing the chat content */
+    }
+
+    #toggleChatBtn {
+        background: none;
+        border: none;
+        color: #0077b6;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+    /* ... Existing scripts ... */
+
+    const toggleChatBtn = document.getElementById("toggleChatBtn");
+    const chatContent = document.getElementById("chatContent");
+
+    const chatroom = document.getElementById("chatroom");
+
+toggleChatBtn.addEventListener("click", function() {
+    if(chatContent.style.display === "none") {
+        chatContent.style.display = "block";
+        toggleChatBtn.textContent = "Minimize";
+        chatroom.style.width = "250px";
+        chatroom.style.height = "400px";
+    } else {
+        chatContent.style.display = "none";
+        toggleChatBtn.textContent = "Maximize";
+        chatroom.style.width = "25px";   // 10% of original width
+        chatroom.style.height = "40px";  // 10% of original height
+    }
+});
+</script>
+<footer>
+    <p>&copy; 2023 Save Them Sea Critters. All rights reserved.</p>
+</footer>
+    </body>
+    </html>
+    
